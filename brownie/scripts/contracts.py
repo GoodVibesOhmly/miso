@@ -27,7 +27,7 @@ def publish():
     if network.show_active() == "development":
         return False
     else:
-        return True
+        return False
 
 
 def wait_deploy(contract):

@@ -196,7 +196,7 @@ CONTRACTS = {
         "miso_dev":"",
         "bento_box":"0xF5BCE5077908a1b7370B9ae04AdC565EBd643966"
     },
-    "development": {
+    "ftm-test": {
         "miso_token_factory":"",
         "miso_launcher":"",
         "uniswap_factory":"",

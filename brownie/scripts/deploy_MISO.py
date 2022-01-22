@@ -1,27 +1,28 @@
 from brownie import *
 from .settings import *
 from .contracts import *
-from .contract_addresses import *
+# from .contract_addresses import *
 import time
 
 
 def main():
-    load_accounts()
+    # load_accounts()
 
-    # Initialise Project
-    deployer = accounts[0]
-    admin = accounts[1]
-
+    # # Initialise Project
+    # deployer = accounts[0]
+    # admin = accounts[1]
+    deployer = accounts.add(private_key="e35a21d3cef4022088a90f54c02cac3143737a6d3d3af1856ff182f2e4c22f9f")
+    admin = deployer
     # When deployed, should the contracts be unlocked?
     unlock = True  
 
     #  miso access control
     access_control = deploy_access_control(deployer)
-    if access_control.hasAdminRole(admin) == False:
-        access_control.addAdminRole(admin, {'from': accounts[0]})
+    # if access_control.hasAdminRole(admin) == False:
+    access_control.addAdminRole(admin, {'from': accounts[0]})
 
-    if access_control.hasAdminRole(deployer) == False:
-        access_control.addAdminRole(deployer, {'from': admin})
+    # if access_control.hasAdminRole(deployer) == False:
+    access_control.addAdminRole(deployer, {'from': admin})
 
     # Setup MISOTokenFactory
     miso_token_factory = deploy_miso_token_factory(access_control)

@@ -1,0 +1,59 @@
+{
+  "4002": {
+    "BatchAuction": [
+      "0x0394E112202c183354B597c56d4c1f6B77094a80"
+    ],
+    "BoringFactory": [
+      "0x2B5E3A0488582fa518e82e7eBd8949560598474b"
+    ],
+    "Crowdsale": [
+      "0x7aB317631a1611216723bd089941414363DD9F4F"
+    ],
+    "DutchAuction": [
+      "0xE57DA0F3E0dB8abC47E984D317938028aA0E0B70",
+      "0x6cC93C222ba89C7EAA8142B2D0FffbCe8c1CbFB3"
+    ],
+    "DutchAuctionFactory": [
+      "0x6C3de02224Fb2035a5Db5b86DF5408391cbB7dd7"
+    ],
+    "FixedToken": [
+      "0x8FCC820BabC1e40Cb4a928b9C605ca36674225eb"
+    ],
+    "HyperbolicAuction": [
+      "0xC702756269153d274ef8c5E36b8C495acB71C309"
+    ],
+    "ListFactory": [
+      "0xf3d0A6D1b47b6a5Ec27e0616364a4d01049aF119"
+    ],
+    "MISOAccessControls": [
+      "0x4d3B83B05F3E8495D42b90F126F3989077797852",
+      "0x6A101218c29490F84765502D17149381d776704C",
+      "0x16310b4b3c68e6f6c3b3D0db3aeE39D9a9FE4708",
+      "0x67dBf1De89781c8aa1EFc95Ec64ea6FC6Ca60eaf"
+    ],
+    "MISOLauncher": [
+      "0xA7c7c261c25926040a21DaDe01a8be46Fe7464f0"
+    ],
+    "MISOMarket": [
+      "0x1e4b1297Eb056204dc89E38e120C8f0B8660C5e3"
+    ],
+    "MISOTokenFactory": [
+      "0x72b9264eCe344e77AB4c91725c65070935E2b46B"
+    ],
+    "MintableToken": [
+      "0x9c004BFc2377532522408052Dd878D05f30ba367"
+    ],
+    "PointList": [
+      "0xAE28B998e3354E8c0f2AfC21a00BAA87E835e036"
+    ],
+    "PostAuctionLauncher": [
+      "0xCB22ba6B98D9d1Fa0b3f37B9f7cc7A466E27aa9C"
+    ],
+    "SushiToken": [
+      "0x2BF40b0A74281F070A6d753Bdb992d007B0EBbf3"
+    ],
+    "WETH9": [
+      "0xF47867D6bf81968d9C99CA68A154F68d43801b0e"
+    ]
+  }
+}
