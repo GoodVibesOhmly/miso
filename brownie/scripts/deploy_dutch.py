@@ -1,11 +1,31 @@
-from brownie import DutchAuctionFactory
-from .settings import *
-from .contracts import *
-# from .contract_addresses import *
-import time
+from brownie import DutchAuction, accounts
 
 
-def main():
-    deployer = accounts.add(private_key="e35a21d3cef4022088a90f54c02cac3143737a6d3d3af1856ff182f2e4c22f9f")
-    da = DutchAuctionFactory.deploy({"from": deployer})
+def main(account):
+    da = deploy_dutch_auction(account)
+    init_dutch_auction(account, da)
+
+
+def deploy_dutch_auction(account):
+    acct = accounts.load(account)
+    da = DutchAuction.deploy({"from": acct}, publish_source=True)
+
     return da
+
+
+def init_dutch_auction(account, da):
+    acct = accounts.load(account)
+    da.initAuction(
+        '0x5DfeDb20C722a9D4529B2B0948a3CE526BB6Fe90',  # Committee Multisig
+        '0x747d453192D8A0B2e2184738033d0A6296301476',  # aPHM
+        75000e18,
+        '1643401800',  # Monday, 28 January 2022 8:30:00 PM UTC
+        '1643661000',  # Monday, 31 January 2022 8:30:00 PM UTC
+        '0xdc301622e621166bd8e82f2ca0a26c13ad0be355',  # FRAX
+        2000e18,
+        50e18,
+        acct.address,  # Committee Multisig
+        '0x0000000000000000000000000000000000000000',
+        '0xTBD',  # PhantomDutchAuctionVault
+        {"from": acct}
+    )
